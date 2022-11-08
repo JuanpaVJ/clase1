@@ -4,7 +4,9 @@ const createTask = (evento) => {
     // console.log(evento);
     evento.preventDefault();
     const input = document.getElementById('inputPrincipal');
-    console.log(input.value);
+    const value = input.value;
+    input.value = '';
+    console.log(value);
 }
 
 console.log(btn);
