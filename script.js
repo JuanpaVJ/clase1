@@ -1,6 +1,7 @@
 const btn = document.getElementById('btnPrincipal')
 
 const createTask = (evento) => {
+    // console.log(evento);
     evento.preventDefault();
     const input = document.getElementById('inputPrincipal');
     console.log(input.value);
