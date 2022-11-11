@@ -7,14 +7,14 @@ const createTask = (evento) => {
     const value = input.value;
     const task = document.getElementById('card_agregada');
     input.value = '';
-    //? para incorporar contenido html a java se utilizan las comillas inversas 
-    //! ALT 96 (tiene que ser en el teclado numerico)
+    //? para incorporar contenido html a java se utilizan las comillas inversas:
+    //! ALT 96 (tiene que ser en el teclado numerico) 
     const content = `<div>
             <i class="far fa-check-square icon"></i>
             <span class="task">${value}</span>
         </div>
         <i class="fas fa-trash-alt trashIcon icon"></i>`;
-    task.innerHTML = content;
+    task.innerHTML = content; //!innerHTML devuelve o estblece la sintaxis html describiendo los descendientes del elemento
     console.log(content);
 }
 
