@@ -5,7 +5,9 @@ const createTask = (evento) => {
     evento.preventDefault();
     const input = document.getElementById('inputPrincipal');
     const value = input.value;
-    const task = document.getElementById('card_agregada');
+    const list = document.getElementById('listaMain');
+    const task = document.createElement('li');
+    task.classList.add('cardStyle');
     input.value = '';
     //? para incorporar contenido html a java se utilizan las comillas inversas y el valor que se quiera agregar desde javascript se coloca: ${valor}
     //! ALT 96 (tiene que ser en el teclado numerico) 
@@ -15,6 +17,11 @@ const createTask = (evento) => {
         </div>
         <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML = content; //!innerHTML: con esto se puede asignar codigo HTML <--> java
+    //! un método de acceso rápido al contenido completo de un contenedor en HTML.
+
+    list.appendChild(task);
+    //? Al elemento "list" quiero agregarle un hijo
+
     console.log(content);
 }
 
