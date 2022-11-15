@@ -93,11 +93,11 @@ form {
   padding: 10px;
 }
 
-.check-icon {
+.icon {
   cursor: pointer;
 }
 
-.check-icon:hover {
+.icon:hover {
   color: rgba(62, 161, 219, 1);
 }
 
