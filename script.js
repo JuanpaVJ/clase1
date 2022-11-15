@@ -12,7 +12,7 @@ const createTask = (evento) => {
     //? para incorporar contenido html a java se utilizan las comillas inversas y el valor que se quiera agregar desde javascript se coloca: ${valor}
     //! ALT 96 (tiene que ser en el teclado numerico) 
     const content = `<div>
-            <i class="far fa-check-square icon"></i>
+            ${check}
             <span class="task">${value}</span>
         </div>
         <i class="fas fa-trash-alt trashIcon icon"></i>`;
@@ -24,8 +24,13 @@ const createTask = (evento) => {
 
     console.log(content);
 }
-
 console.log(btn);
 
-
 btn.addEventListener('click', createTask);
+const check = () => {
+    const i = document.createElement('i');
+    i.classList.add('far');
+    i.classList.add('icon');
+    i.classList.add('fa-check-square');
+    return i;
+}
