@@ -1,7 +1,9 @@
+//!     IIFE = Immediately Invoked Function Expression
+( () => {
+
 const btn = document.getElementById('btnPrincipal')
 
 const createTask = (evento) => {
-    // console.log(evento);
     evento.preventDefault();
     const input = document.getElementById('inputPrincipal');
     const value = input.value;
@@ -13,7 +15,6 @@ const createTask = (evento) => {
     //! ALT 96 (tiene que ser en el teclado numerico) 
 
 
-    console.log(checkComplete());
     const taskContent = document.createElement('div');
     taskContent.appendChild(checkComplete());
     const titleTask = document.createElement('span');
@@ -31,11 +32,7 @@ const createTask = (evento) => {
     list.appendChild(task);
     //? Al elemento "list" quiero agregarle un hijo
 
-    console.log(content);
 }
-
-console.log(btn);
-
 
 btn.addEventListener('click', createTask);
 
@@ -48,9 +45,11 @@ const checkComplete = () => {
 
 
 const completeTask = (event) => {
-    console.log(event);
     const element = event.target
     element.classList.toggle('fas');
     element.classList.toggle('completeIcon');
     element.classList.toggle('far');
 }
+
+}) ();
+
