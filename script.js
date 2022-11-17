@@ -54,9 +54,8 @@ const deleteIcon = () => {
 }
 
 const deleteTask = (event) => {
-    console.log('eliminar tarea')
-    console.log(event.target.parentElement);
+    const parent = event.target.parentElement;
+    parent.remove();
 }
-
 }) ();
 
