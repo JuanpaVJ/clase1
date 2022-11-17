@@ -1,5 +1,9 @@
+//! IMPORTANDO ARCHIVOS HACIA ESTE DOC
+import checkComplete from "./components/checkComplete.js";
+import deleteIcon from "./components/deleteIcon.js";
+
 //!     IIFE = Immediately Invoked Function Expression
-( () => {
+//( () => {
 
 const btn = document.getElementById('btnPrincipal')
 
@@ -32,30 +36,4 @@ const createTask = (evento) => {
 
 btn.addEventListener('click', createTask);
 
-const checkComplete = () => {
-    const i = document.createElement('i');
-    i.classList.add('far', 'icon', 'fa-check-square');
-    i.addEventListener('click', completeTask);
-    return i;
-}
-
-const completeTask = (event) => {
-    const element = event.target
-    element.classList.toggle('fas');
-    element.classList.toggle('completeIcon');
-    element.classList.toggle('far');
-}
-
-const deleteIcon = () => {
-    const i = document.createElement('i');
-    i.classList.add('fas', 'fa-trash-alt', 'trashIcon', 'icon');
-    i.addEventListener('click', deleteTask);
-    return i;
-}
-
-const deleteTask = (event) => {
-    const parent = event.target.parentElement;
-    parent.remove();
-}
-}) ();
-
+//}) ();
